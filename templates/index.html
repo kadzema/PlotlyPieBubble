@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bello Button Dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="text-center">Belly Button Biodiversity Dashboard</h1>
+            <p class="text-center">Use the interactive charts below to explore the data</p>
+            <!-- <p>
+                <a class="btn btn-primary btn-lg"></a>
+            </p> -->
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="panel panel-default">
+                <div class="panel-body" style="background-color:whitesmoke"><h5>Select Sample:</h5>
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Sample Metadata:</h3>
+                    </div>
+                    <div class="panel-body" style="background-color:whitesmoke">
+                        <div id="metaList"></div>
+                        
+                    </div>
+                </div>
+        </div>
+        
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <div id="piePlot"></div>
+        </div>
+        
+        
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div id="bubbleChart"></div>
+            <!-- <div id="hoverInfo"></div> -->
+        </div>
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <script src="../static/plots.js" type="text/javascript"></script> 
+</body>
+</html>
