@@ -1,1 +1,1 @@
-worker: python FlaskHomework15.py
+web: gunicorn FlaskHomework15:app
