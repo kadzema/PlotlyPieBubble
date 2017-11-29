@@ -75,7 +75,9 @@ def outs():
     for otu in otus:
         # otuList.append(otu[0])
         # use a dictionary instead so we have the id definitively
-        otuDict.update({otu[0]: otu[1]})
+        # otuDict.update({otu[0]: otu[1]})
+        # see if this is faster
+        otuDict[otu[0]] = otu[1]
     # return jsonify(otuList)
     return jsonify(otuDict)
 
