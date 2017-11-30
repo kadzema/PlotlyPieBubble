@@ -124,7 +124,7 @@ def washing(sample):
     session = Session(engine)
     wfreq = session.query(Samples_metadata.WFREQ).filter_by(SAMPLEID=sample).scalar()
     # print(wfreq)
-    return "<h1>"+str(wfreq) + "</h1>"
+    return jsonify(wfreq)
 
 
 @app.route('/samples/<sample>')
