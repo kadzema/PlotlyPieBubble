@@ -1,2 +1,1 @@
-web: FlaskHomework15.py
-heroku ps:scale web=1
+web: gunicorn FlaskHomework15:app
